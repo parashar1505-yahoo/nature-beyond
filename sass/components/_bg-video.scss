@@ -5,7 +5,8 @@
         height: 100%;
         width: 100%;
         z-index: -1;
-        opacity: .15;
+        opacity: .25;
+        filter: brightness(80%);
 
         &__content {
                 height: 100%;
