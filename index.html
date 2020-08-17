@@ -12,6 +12,9 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
         <title>NatureBeyond | Exciting tours for adventurous people</title>
+
+        
+        
     </head>
 
     <body>
@@ -24,10 +27,10 @@
 
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
-                <ul class="navigation__list">
+                <ul class="navigation__list" id="menu">
                     <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About NatureBeyond</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>03</span>Popular tours</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
                 </ul>
@@ -433,6 +436,22 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var menu = document.getElementById("menu");
+            var closeIcon = document.getElementById("navi-toggle");
+            console.log (menu);
+            
+
+
+            menu.addEventListener('click', handleMenuClick);
+
+            function handleMenuClick(event) {
+                if (event.target instanceof HTMLAnchorElement) {
+                    closeIcon.checked = false;
+                }
+            }
+        </script>
 
     </body>
 </html>

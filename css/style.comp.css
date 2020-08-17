@@ -60,7 +60,8 @@ html {
     @include respond(phone) {
         font-size: 50%;
     }
-    */ }
+    */
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -882,6 +883,8 @@ body {
   list-style: none;
   text-align: center;
   width: 100%; }
+  .navigation__list a {
+    display: block; }
 
 .navigation__item {
   margin: 1rem; }
