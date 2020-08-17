@@ -12,7 +12,10 @@
     "concat:sass": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:sass prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass concat:sass prefix:css compress:css",
+    "copy1:proj": "cp css/style.css dist/css",
+    "copy2:proj": "cp index.html dist",
+    "package:proj": "npm-run-all build:css copy1:proj copy2:proj"
   },
   "author": "paragupt",
   "license": "ISC",
